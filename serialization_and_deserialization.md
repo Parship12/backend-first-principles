@@ -73,7 +73,7 @@ fmt.Println(string(jsonBytes))
 
 ### Output
 
-```
+```json
 {"id":1,"name":"Parship","email":"parship@example.com"}
 ```
 
@@ -105,7 +105,7 @@ fmt.Println(user)
 
 ### Output
 
-```
+```plaintext
 {2 Amit amit@example.com}
 ```
 

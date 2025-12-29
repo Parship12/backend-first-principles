@@ -70,7 +70,7 @@ HTTP communication happens using **messages**.
 
 Example:
 
-```
+```http
 GET /users HTTP/1.1
 Host: example.com
 Authorization: Bearer token
@@ -84,7 +84,7 @@ Authorization: Bearer token
 
 Example:
 
-```
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 ```

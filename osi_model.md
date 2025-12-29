@@ -26,7 +26,7 @@ It is mostly **theoretical**, but extremely important for **understanding real s
 The 7 Layers of the OSI Model (Top → Bottom)
 --------------------------------------------
 
-```
+```plaintext
 7. Application
 6. Presentation
 5. Session
@@ -246,7 +246,7 @@ Data Flow Example (Very Important)
 
 When you send a request:
 
-```
+```plaintext
 Application → Presentation → Session → Transport → Network → Data Link → Physical
 ```
 

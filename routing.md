@@ -23,7 +23,7 @@ to:
 
 Example:
 
-```
+```http
 GET /api/users → getAllUsers()
 POST /api/users → createUser()
 ```
@@ -46,7 +46,7 @@ They do not contain any variable segments.
 
 ### Example
 
-```
+```http
 GET /api/books
 ```
 
@@ -76,7 +76,7 @@ These values are called **path parameters**.
 
 ### Example
 
-```
+```http
 GET /api/users/123
 ```
 
@@ -89,7 +89,7 @@ Here:
 
 Many frameworks use a placeholder syntax like:
 
-```
+```plaintext
 /api/users/:id
 ```
 
@@ -103,7 +103,7 @@ Query parameters are **key-value pairs appended to the URL** after a question ma
 
 ### Syntax
 
-```
+```http
 /api/books?author=tolkien&page=2&limit=10
 ```
 
@@ -146,7 +146,7 @@ Nested routes express **relationships between resources** in REST APIs.
 
 ### Example
 
-```
+```http
 /api/users/123/posts/456
 ```
 
@@ -177,7 +177,7 @@ Route versioning allows APIs to **evolve safely** without breaking existing clie
 
 ### Example
 
-```
+```http
 /api/v1/products
 /api/v2/products
 ```
@@ -205,7 +205,7 @@ Catch-all routes handle **requests that do not match any defined route**.
 
 ### Example
 
-```
+```plaintext
 /*
 ```
 
@@ -217,7 +217,7 @@ Catch-all routes handle **requests that do not match any defined route**.
 
 ### Typical Response
 
-```
+```http
 404 - Route not found
 ```
 
