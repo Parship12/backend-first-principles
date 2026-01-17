@@ -138,11 +138,45 @@ This makes Wasm:
 * Very secure
 * Safe for untrusted code
 
+WebAssembly often runs:
+
+* Third-party plugins
+* User-uploaded code
+* Edge functions
+
+Without sandboxing:
+
+* A bad program could delete files
+* Steal secrets
+* Crash the system
+
+Security by default
+In Wasm:
+
+* No file access by default
+* No network access by default
+* No system calls by default
+* This is safer than native binaries.
+
+Same code, anywhere
+Sandboxing ensures:
+
+* Same behavior on all machines
+* No OS-specific assumptions
+* This makes Wasm portable.
+
+Fast startup + isolation
+Sandboxing is:
+
+* Lighter than VMs
+* Stronger than containers
+
+So you get:
+
+* Speed
+* Safety
+  
 Browsers and servers can run Wasm without fear.
-
-The video clearly states:
-
-> **Wasm has strict sandboxing by design.**
 
 ---
 
@@ -181,19 +215,7 @@ They achieved:
 
 ---
 
-## 9. What Makes Wasm Powerful (Summary)
-
-Wasm’s core strengths:
-
-* Fast execution
-* Secure sandbox
-* Small binaries
-* Works everywhere
-* Any language support
-
----
-
-## 10. Beyond Browsers: Server-Side Wasm
+## 9. Beyond Browsers: Server-Side Wasm
 
 People realized:
 
@@ -217,7 +239,7 @@ So Wasm is seen as:
 
 ---
 
-## 11. Simple Rust Example (Conceptual)
+## 10. Simple Rust Example
 
 Rust code:
 
@@ -233,7 +255,7 @@ No recompilation.
 
 ---
 
-## 12. Server-Side Use Cases (Easy)
+## 11. Server-Side Use Cases
 
 Wasm is good for:
 
@@ -253,7 +275,7 @@ Real users:
 
 ---
 
-## 13. WASI (Why It’s Needed)
+## 12. WASI (Why It’s Needed)
 
 Problem:
 
@@ -274,7 +296,7 @@ Still sandboxed, still secure.
 
 ---
 
-## 14. Component Model (High Level)
+## 13. Component Model (High Level)
 
 Component model allows:
 
@@ -291,5 +313,62 @@ This improves:
 * Reuse
 * Modularity
 * Security
+
+---
+
+## 14. What Is WasmEdge?
+
+> **WasmEdge is like a “Java runtime” but for WebAssembly. It is a runtime that runs WebAssembly on the server.**
+
+It takes a `.wasm` file and **executes it on servers**, not in browsers.
+
+---
+
+## 15. Why WasmEdge Exists
+
+Browsers already know how to run Wasm.
+Servers needed the same ability.
+
+WasmEdge provides:
+
+* A fast WebAssembly runtime
+* For backend and cloud use cases
+
+---
+
+## 16. What WasmEdge Is Used For
+
+WasmEdge can run Wasm for:
+
+* Backend APIs
+* Edge computing
+* Serverless functions
+* ML inference
+* Plugins and extensions
+
+---
+
+## 17. How WasmEdge Is Different from Browsers
+
+| Browser              | WasmEdge                    |
+| -------------------- | --------------------------- |
+| Runs Wasm in browser | Runs Wasm on server         |
+| UI-focused           | Backend-focused             |
+| No OS access         | Controlled OS access (WASI) |
+
+---
+
+## 18. How WasmEdge Stays Secure
+
+* Strong sandboxing
+* Limited system access
+* Only allowed APIs are exposed
+
+So even on servers, Wasm stays safe.
+
+* **Browser** → Chrome runs Wasm
+* **Server** → WasmEdge runs Wasm
+
+Same `.wasm` file, different environment.
 
 ---
